@@ -8,5 +8,85 @@
 <body>
     <h1>Запись на мероприятие</h1>
     <p>Пожалуйста, заполните форму ниже, чтобы зарегистрироваться на мероприятие.</p>
+    <form action="" method="POST">
+        <label for="event-name" required>Название мероприятия</label>
+        <select id="event-name" name="event">
+            <option value="" selected disabled>Choose event</option>
+            <option value="html">Basic HTML</option>
+            <option value="css">Basic CSS</option>
+            <option value="practice">Webinar Practice</option>
+        </select>
+        <label for="participant-name">Ваше имя</label>
+        <input 
+            type="text" 
+            id="participant-name" 
+            placeholder="Ваше имя" 
+            name="participant" 
+            required
+            >
+            <label for="participant-email">Ваш email</label>
+        <input 
+            type="email" 
+            id="participant-email" 
+            placeholder="Ваш email" 
+            name="email"
+            required>
+            <!-- <label for="participant-password">Ваш пароль</label>
+        <input 
+            type="password" 
+            id="participant-password" 
+            placeholder="Ваш пароль" 
+            name="password"
+            > -->
+            <fieldset>
+                <legend>Формат участия</legend>
+            <input 
+            type="radio" 
+            id="online" 
+            name="format" 
+            value="online">
+            <label for="online">Онлайн</label>
+            <input 
+            type="radio" 
+            id="offline" 
+            name="format" 
+            value="offline"
+            checked
+            >
+            <label for="offline">Офлайн</label>
+            <input
+            type="radio"
+            id="recording"
+            name="format"
+            value="recording"
+            >
+            <label for="recording">Запись</label>
+            </fieldset>
+            <p>Дополнительные опции</p>
+            <input 
+            type="checkbox"
+            id="reminder"
+            name="reminder"
+            value="yes"
+            checked
+            >
+            <label for="reminder">Получать напоминания</label>
+            <input 
+            type="checkbox"
+            id="materials"
+            name="materials"
+            value="yes"
+            checked
+            >
+            <label for="materials">Получать учебные материалы</label>
+            <label for="question">Ваши вопросы </label>
+            <textarea 
+            id="question" 
+            name="question" 
+            rows="10"
+            placeholder="Ваши вопросы или комментарии">
+        </textarea>
+        <button type="submit">Зарегистрироваться</button>
+    </form>
 </body>
 </html>
